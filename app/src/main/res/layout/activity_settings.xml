@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asfand.weatherapp2.SettingsActivity">
+
+    <EditText
+        android:id="@+id/cityedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="islamabad"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/rGUnit"
+        app:layout_constraintVertical_bias="0.522" />
+
+    <RadioGroup
+        android:id="@+id/rGUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onUnitClick"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/cityedit"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintBottom_toTopOf="@+id/cityset"
+        app:layout_constraintHorizontal_bias="0.05">
+
+        <RadioButton
+            android:id="@+id/rBC"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:onClick="onUnitClick"
+            android:text="C" />
+
+        <RadioButton
+            android:id="@+id/rBF"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:onClick="onUnitClick"
+            android:text="F"
+
+            />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/cityset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="148dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="onSave"
+        android:text="Show Weather"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintLeft_toLeftOf="@+id/rGUnit"
+        app:layout_constraintRight_toRightOf="@+id/rGUnit" />
+
+</android.support.constraint.ConstraintLayout>
